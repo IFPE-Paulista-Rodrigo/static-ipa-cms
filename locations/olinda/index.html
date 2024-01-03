@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+
+
+<script src="../../static/leaflet/leaflet.js"></script>
+
+
+
+<script src="../../static/leaflet/leaflet.extras.js"></script>
+<script>
+    
+    L.Control.ResetView.TITLE = "Reset view";
+    L.Control.ResetView.ICON = "url(/static/leaflet/images/reset-view.png)";
+    
+</script>
+
+        
+<link rel="stylesheet" href="../../static/leaflet/leaflet.css" />
+<style>.leaflet-container-default {min-height: 300px;}</style>
+
+
+        <title>
+            
+                
+                    Olinda
+                
+            
+            
+                | Agricultura Urbana e Periurbana
+            
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../static/wagtailfontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="../../static/css/font-marcellus.css">
+        <link rel="stylesheet" href="../../static/css/font-open-sans.css">
+        <link rel="stylesheet" href="../../static/css/main.css">
+    </head>
+
+    <body class="template-location-page">
+        
+
+        
+            
+
+<div class="header clearfix">
+    <div class="container">
+        <div class="navigation" data-navigation>
+            <a href="../../index.html" class="navigation__logo">Agricultura Urbana e Periurbana</a>
+
+            <button
+                type="button"
+                class="navigation__mobile-toggle"
+                aria-label="Toggle mobile menu"
+                aria-expanded="false"
+                data-mobile-navigation-toggle
+            >
+                <span class="navigation__toggle-icon-bar"></span>
+                <span class="navigation__toggle-icon-bar"></span>
+                <span class="navigation__toggle-icon-bar"></span>
+            </button>
+
+            <nav class="navigation__mobile" data-mobile-navigation hidden>
+                <a href="../../index.html" class="navigation__logo">Agricultura Urbana e Periurbana</a>
+                <ul class="navigation__items nav-pills">
+                    
+                    
+                    
+
+
+
+    <li class="presentation produtos">
+        
+            <a href="../../produtos.html">Produtos</a>
+        
+    </li>
+
+    <li class="presentation locais active">
+        
+            <a href="../index.html">Locais</a>
+        
+    </li>
+
+    <li class="presentation blog">
+        
+            <a href="../../blog/index.html">Blog</a>
+        
+    </li>
+
+    <li class="presentation galeria">
+        
+            <a href="../../gallery/index.html">Galeria</a>
+        
+    </li>
+
+    <li class="presentation contato">
+        
+            <a href="../../contact/index.html">Contato</a>
+        
+    </li>
+
+    <li class="presentation sobre">
+        
+            <a href="../../about/index.html">Sobre</a>
+        
+    </li>
+
+
+                </ul>
+                <form action="http://ec2-44-192-111-70.compute-1.amazonaws.com/search" method="get" class="navigation__mobile-search" role="search">
+                    <label for="mobile-search-input" class="u-sr-only">Search the bakery</label>
+                    <input class="navigation__search-input" id="mobile-search-input" type="text" placeholder="Search" autocomplete="off" name="q">
+                    <div aria-hidden="true" class="navigation__search-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#333" />
+                        </svg>
+                    </div>
+                </form>
+            </nav>
+
+            <nav class="navigation__desktop" aria-label="Main">
+                <ul class="navigation__items nav-pills">
+                    
+                    
+                    
+
+
+
+    <li class="presentation produtos">
+        
+            <a href="../../produtos.html">Produtos</a>
+        
+    </li>
+
+    <li class="presentation locais active">
+        
+            <a href="../index.html">Locais</a>
+        
+    </li>
+
+    <li class="presentation blog">
+        
+            <a href="../../blog/index.html">Blog</a>
+        
+    </li>
+
+    <li class="presentation galeria">
+        
+            <a href="../../gallery/index.html">Galeria</a>
+        
+    </li>
+
+    <li class="presentation contato">
+        
+            <a href="../../contact/index.html">Contato</a>
+        
+    </li>
+
+    <li class="presentation sobre">
+        
+            <a href="../../about/index.html">Sobre</a>
+        
+    </li>
+
+
+                </ul>
+            </nav>
+
+            <form action="http://ec2-44-192-111-70.compute-1.amazonaws.com/search" method="get" class="navigation__search" role="search">
+                <label for="search-input" class="u-sr-only">Search the bakery</label>
+                <input class="navigation__search-input" id="search-input" type="text" placeholder="Pesquisar" autocomplete="off" name="q">
+                <div aria-hidden="true" class="navigation__search-icon">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#333" />
+                    </svg>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+        
+
+        
+            
+            
+
+
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        
+                            
+                                <li><a href="../../index.html">Home</a>
+                                    <svg aria-hidden="true" class="breadcrumb__chevron-icon" viewBox="0 0 11 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.41669 23.2091L7.76243 17L11 17L4.13954 25L0.302327 25C0.453036 24.9651 0.617043 24.8867 0.794348 24.7647C0.971652 24.6427 1.15339 24.4989 1.33956 24.3333C1.52573 24.1678 1.7119 23.9891 1.89807 23.7974C2.08424 23.5969 2.25711 23.4009 2.41669 23.2091Z" fill="#C55302"/>
+    <path d="M2.41669 10.7908L7.76243 17L11 17L4.13954 9L0.302327 9C0.453036 9.03486 0.617043 9.11329 0.794348 9.23529C0.971652 9.3573 1.15339 9.50109 1.33956 9.66667C1.52573 9.83224 1.7119 10.0109 1.89807 10.2026C2.08424 10.403 2.25711 10.5991 2.41669 10.7908Z" fill="#C55302"/>
+</svg></li>
+                            
+                        
+                            
+                                <li><a href="../index.html">Locais</a>
+                                    <svg aria-hidden="true" class="breadcrumb__chevron-icon" viewBox="0 0 11 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.41669 23.2091L7.76243 17L11 17L4.13954 25L0.302327 25C0.453036 24.9651 0.617043 24.8867 0.794348 24.7647C0.971652 24.6427 1.15339 24.4989 1.33956 24.3333C1.52573 24.1678 1.7119 23.9891 1.89807 23.7974C2.08424 23.5969 2.25711 23.4009 2.41669 23.2091Z" fill="#C55302"/>
+    <path d="M2.41669 10.7908L7.76243 17L11 17L4.13954 9L0.302327 9C0.453036 9.03486 0.617043 9.11329 0.794348 9.23529C0.971652 9.3573 1.15339 9.50109 1.33956 9.66667C1.52573 9.83224 1.7119 10.0109 1.89807 10.2026C2.08424 10.403 2.25711 10.5991 2.41669 10.7908Z" fill="#C55302"/>
+</svg></li>
+                            
+                        
+                            
+                                <li aria-current="page">Olinda</li>
+                            
+                        
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+        
+
+        
+            
+
+        
+
+        <main>
+            
+    
+
+
+    
+    <div class="container-fluid hero" style="background-image:url('../../media/images/olinda_b8gEHO4.2e16d0ba.fill-1920x600.jpg')">
+        <div class="hero__container">
+            <h1 class="hero__title">Olinda</h1>
+        </div>
+    </div>
+
+
+
+    <div class="container bread-detail">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-7">
+                    <div class="row">
+                        
+                            <p class="bread-detail__introduction">
+                                Vivamus convallis tincidunt mauris sed aliquet. Sed interdum velit ac efficitur feugiat. Vivamus ante nunc, suscipit eget aliquet vel, volutpat eu odio. Ut sit amet libero vitae dui vulputate suscipit nec a arcu.
+                            </p>
+                        
+
+                        <div class="hidden-md-down">
+                            <div class="block-paragraph_block"><p data-block-key="ppy8q"><br/></p><p data-block-key="cwnin"> Nam vitae lorem ipsum. Nullam varius lectus a lacus posuere facilisis. Integer ultrices suscipit elit, a cursus nulla efficitur eu. Nullam tempus feugiat ultricies. Phasellus at magna velit. Fusce dignissim, magna eu faucibus imperdiet, mauris est semper neque, quis maximus dui nibh at nisl. Etiam ultricies interdum augue, ac consectetur lectus scelerisque a. In nec blandit dolor. Aenean ut lacus at enim gravida maximus vitae nec ante. Vestibulum ullamcorper, odio ac pulvinar interdum, nunc turpis pretium urna, nec tincidunt elit risus ac neque. Vivamus ut ullamcorper nibh. Pellentesque blandit nunc nec sapien ultrices hendrerit. Nulla finibus lectus a augue pellentesque, id vestibulum neque commodo.</p>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-1">
+                    <div class="row">
+                        <div class="bread-detail__meta">
+                            <p class="location__meta-title">Estado de Operação</p>
+                            
+                                Este local está fechado
+                            
+
+                            <p class="location__meta-title">Endereço</p>
+                            <address><p>Olinda,<br>Pernambuco,<br>Brasil.</p></address>
+                            <p class="location__meta-title">Contato</p>
+                            <p>E-mail: <email>contato@olinda.com.br</email></p>
+                            <p>Telefone: <phone>(81)9999-9999</phone></p>
+                            
+                            
+                                <p class="location__meta-title">Horário de Abertura</p>
+                                
+                                    <time itemprop="openingHours" datetime="SEG: 08:00 - 18:00 UTC" class="location__time">
+                                        <span class="location__day">SEG</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="TER: 08:00 - 18:00 UTC" class="location__time">
+                                        <span class="location__day">TER</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="QUA: 08:00 - 18:00 UTC" class="location__time">
+                                        <span class="location__day">QUA</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="QUI: 08:00 - 18:00 UTC" class="location__time">
+                                        <span class="location__day">QUI</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="SEX: 08:00 - 18:00 UTC" class="location__time">
+                                        <span class="location__day">SEX</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="SAB: 10:00 - 16:00 UTC" class="location__time">
+                                        <span class="location__day">SAB</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                                    <time itemprop="openingHours" datetime="DOM: -- - -- UTC" class="location__time">
+                                        <span class="location__day">DOM</span>:
+                                        <span class="location__hours">
+                                            
+                                                Fechado
+                                            
+                                        </span></time>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="row hidden-md-up">
+                        <div class="block-paragraph_block"><p data-block-key="ppy8q"><br/></p><p data-block-key="cwnin"> Nam vitae lorem ipsum. Nullam varius lectus a lacus posuere facilisis. Integer ultrices suscipit elit, a cursus nulla efficitur eu. Nullam tempus feugiat ultricies. Phasellus at magna velit. Fusce dignissim, magna eu faucibus imperdiet, mauris est semper neque, quis maximus dui nibh at nisl. Etiam ultricies interdum augue, ac consectetur lectus scelerisque a. In nec blandit dolor. Aenean ut lacus at enim gravida maximus vitae nec ante. Vestibulum ullamcorper, odio ac pulvinar interdum, nunc turpis pretium urna, nec tincidunt elit risus ac neque. Vivamus ut ullamcorper nibh. Pellentesque blandit nunc nec sapien ultrices hendrerit. Nulla finibus lectus a augue pellentesque, id vestibulum neque commodo.</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </main>
+
+        <hr>
+
+        
+
+<footer class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-inline">
+                <li class="footer__icon">
+                    <a href="https://site.ipa.br" target="_blank" rel="noreferrer" aria-label="Instituto Agronômico de Pernambuco">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-link fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            
+
+<div class="copyright">
+    <p><b>Instituto Agronômico de Pernambuco</b>, 2023. Todos os direitos reservados.<br/></p>
+</div>
+
+        </div>
+    </div>
+</footer>
+
+
+        <script type="module" src="../../static/js/main.js"></script>
+    </body>
+</html>
